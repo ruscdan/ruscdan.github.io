@@ -1,0 +1,6 @@
+---
+layout: post
+title: "Post 2"
+---
+
+Donec vitae egestas lectus. Nullam neque elit, aliquam ac gravida nec, scelerisque a lorem. Donec efficitur tristique efficitur. Fusce quis ex id massa condimentum cursus. Nulla non volutpat eros. In interdum bibendum eros vitae maximus. Etiam quis facilisis ligula, sed mattis odio. Nam facilisis dui non est rutrum, eu sagittis augue ultricies. Quisque vehicula lacinia urna, nec aliquet urna interdum id. Sed faucibus tempus elit sit amet eleifend. Suspendisse justo velit, tempus vitae arcu eu, posuere imperdiet sapien. Curabitur faucibus ante et nulla finibus varius.
