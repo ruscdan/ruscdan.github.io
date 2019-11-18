@@ -3,3 +3,14 @@
 ---
 
 @import "minima";
+
+$background-image: url(images/dark-river.jpg);
+
+body {
+  background: {
+    image: $background-image;
+    repeat: no-repeat;
+    attachment: fixed;
+    size: 100% 100%;
+  }
+}
