@@ -18,22 +18,24 @@ layout: default
       {%- if page.title == "Home" and i == 3 -%}
         {%- break -%}
       {%- endif -%}
-      <li>
+      <li class="post-list-element">
         {%- assign post = site.posts[i] -%}
         {%- assign by_text = "" -%}
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {%- if post.author -%}
         {%- assign author = site.data.users[post.author] -%}
         {%- assign image_path = "../assets/images/" -%}
-        {%- capture by_text -%}by {{ author.disp_name }}{%- endcapture -%}
-        <img src={{ author.avatar | prepend: image_path }} width="40">
+        {%- capture by_text -%}by <strong>{{ author.disp_name }}</strong>{%- endcapture -%}
+        <img class="post-image" src={{ author.avatar | prepend: image_path }}>
         {%- endif -%}
-        <span class="post-meta">{{ post.date | date: date_format }} {{ by_text }} in {{ post.categories | join: " and " }}</span>
+        <div class="post-info">
+        <div class="post-meta">{{ post.date | date: date_format }} {{ by_text }} in <em>{{ post.categories | join: " and " }}</em></div>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
+        </div>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}

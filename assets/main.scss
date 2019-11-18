@@ -1,12 +1,131 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+
 ---
 
 @import "minima";
 
+$content-width: 900px;
+$spacing-unit: 30px;
+$base-font-size: 16px;
+$small-font-size:  $base-font-size * 0.9;
+
+$text-color:       lightcyan;
+
+$header-font-family: 'Itim', cursive;
 $background-image: url(images/dark-river.jpg);
 
+
+.wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+}
+
+
+.site-header {
+  border: {
+    top: none;
+    bottom: inset 2px white;
+  }
+  box-shadow: 0px 6px 5px 10px gray;
+  min-height: $spacing-unit * 3;
+}
+
+.site-logo {
+  float: left;
+  width: $base-font-size * 5;
+  background-color: white;
+  margin: $spacing-unit*0.5 $spacing-unit*0.5 0 0;
+}
+
+.site-title {
+  @include relative-font-size(3.5);
+  font-family: $header-font-family;
+  /*color: lightcyan;*/
+  
+  &:visited {
+    color: lightcyan;
+  }
+  &:hover {
+    color: lightskyblue;
+    text-decoration: none;
+  }
+  margin: $spacing-unit 0;
+  text-shadow: 1px 1px 6px white;
+}
+
+.site-nav {
+  .page-link {
+    @include relative-font-size(1.4);
+    font-family: $header-font-family;
+    padding: 5px;
+    &:hover {
+      border: 1px solid white;
+      text-decoration: none;
+    }
+  }
+  .trigger {
+    margin-top: $spacing-unit;
+  }
+}
+
+.post-list-heading {
+  border-top: 1px solid gray;
+}
+
+.post-list-element {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 6px 6px 5px 10px black;
+}
+
+.post-image {
+  width: 50px;
+  margin: 10px;
+}
+
+.post-info {
+  margin-top: 10px;
+}
+
+.post-meta {
+  font-size: $base-font-size;
+  color: black;
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+}
+
+.post-link {
+  font-weight: bold;
+  &:visited, &:link {
+    color: black;
+  }
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 body {
+  color: $text-color;
   background: {
     image: $background-image;
     repeat: no-repeat;
