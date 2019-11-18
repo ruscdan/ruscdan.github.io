@@ -20,8 +20,15 @@ layout: default
       {%- endif -%}
       <li>
         {%- assign post = site.posts[i] -%}
+        {%- assign by_text = "" -%}
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {%- if post.author -%}
+        {%- assign author = site.data.users[post.author] -%}
+        {%- assign image_path = "../assets/images/" -%}
+        {%- capture by_text -%}by {{ author.disp_name }}{%- endcapture -%}
+        <img src={{ author.avatar | prepend: image_path }} width="40">
+        {%- endif -%}
+        <span class="post-meta">{{ post.date | date: date_format }} {{ by_text }} in {{ post.categories | join: " and " }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
