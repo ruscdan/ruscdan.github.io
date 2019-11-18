@@ -14,6 +14,15 @@ $text-color:       lightcyan;
 $header-font-family: 'Itim', cursive;
 $background-image: url(images/dark-river.jpg);
 
+@mixin linkColors($colorNormal, $colorHover) {
+  &:visited, &:link {
+    color: $colorNormal;
+  }
+  &:hover, &:active {
+    color: $colorHover;
+    text-decoration: none;
+  }
+}
 
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -52,15 +61,9 @@ $background-image: url(images/dark-river.jpg);
 .site-title {
   @include relative-font-size(3.5);
   font-family: $header-font-family;
-  /*color: lightcyan;*/
   
-  &:visited {
-    color: lightcyan;
-  }
-  &:hover {
-    color: lightskyblue;
-    text-decoration: none;
-  }
+  @include linkColors(lightcyan, lightskyblue);
+  
   margin: $spacing-unit 0;
   text-shadow: 1px 1px 6px white;
 }
@@ -82,6 +85,7 @@ $background-image: url(images/dark-river.jpg);
 
 .post-list-heading {
   border-top: 1px solid gray;
+  text-transform: capitalize;
 }
 
 .post-list-element {
@@ -94,7 +98,7 @@ $background-image: url(images/dark-river.jpg);
 }
 
 .post-image {
-  width: 50px;
+  width: 60px;
   margin: 10px;
 }
 
@@ -113,15 +117,37 @@ $background-image: url(images/dark-river.jpg);
   }
 }
 
+.post-meta-light {
+  @extend .post-meta;
+  color: bisque;
+}
+
 .post-link {
   font-weight: bold;
-  &:visited, &:link {
-    color: black;
+  @include linkColors(black,white);
+}
+
+.footer-heading {
+  @include relative-font-size(1.4);
+}
+
+.p-name {
+  @include relative-font-size(1.2);
+}
+
+.u-email {
+  @include linkColors(lightcyan, lightskyblue);
+}
+
+.social-media-list li {
+  .username, a {
+    @extend .u-email;
   }
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
+}
+  
+.site-footer {
+  border-top: inset 2px white;
+  box-shadow: 0px -6px 5px 10px gray;
 }
 
 body {
