@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    {%- for category in site.categories -%}
+      <h1>{{ category[0] }}</h1>
+      <ul class="post-list">
+        {% for post in category[1] %}
+          <li>
+            {%- assign by_text = "" -%}
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {%- if post.author -%}
+              {%- assign author = site.data.users[post.author] -%}
+              {%- assign image_path = "../assets/images/" -%}
+              {%- capture by_text -%}by {{ author.disp_name }}{%- endcapture -%}
+              <img src={{ author.avatar | prepend: image_path }} width="40">
+            {%- endif -%}
+          <span class="post-meta">{{ post.date | date: date_format }} {{ by_text }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {%- endif -%}
+
+</div>
