@@ -36,6 +36,11 @@ header_pages:
   - about.markdown
   - blog.markdown
 timezone: Europe/Stockholm
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/Dan.png
 
 # Build settings
 theme: minima
