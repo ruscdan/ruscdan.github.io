@@ -1,0 +1,17 @@
+/* TEAM */
+	Blog creator: Dan Rus Ciuca
+	Facebook: https://www.facebook.com/rusciuca.dan
+	Location: Forshaga, Sweden
+	From: Cluj-Napoca, Romania
+
+/* THANKS */
+	Mats Loock (CC)    CC = course coordinator (or cool coder)
+	Johan Leitet (CC)
+	Mihaela Rus Ciuca (my wife as moral support)
+
+/* SITE */
+	Last update: 2019/11/24
+	Language: English
+	Doctype: HTML5
+	Software: Jekyll, Docker, SASS, Visual Studio Code
+	Hosted on: GitHub Pages
