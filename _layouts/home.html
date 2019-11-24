@@ -6,16 +6,17 @@ layout: default
 
   {{ content }}
 
+  {%- assign home_title = "Dan's dark blog" -%}
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">
-      {%- if page.title == "Home" -%}
+      {%- if page.title == home_title -%}
         Recent Posts
       {%- endif -%}
     </h2>
     <ul class="post-list">
       {%- assign size = site.posts.size | minus: 1 -%}
       {%- for i in (0..size) -%}
-      {%- if page.title == "Dan's dark blog" and i == 3 -%}
+      {%- if page.title == home_title and i == 3 -%}
         {%- break -%}
       {%- endif -%}
       <li class="post-list-element">
@@ -42,6 +43,10 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
+
+    {%- if page.title == home_title -%}
+      {%- include share.html -%}
+    {%- endif -%}
 
   {%- endif -%}
 
