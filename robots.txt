@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /_data/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /assets/images/
+Disallow: /_config.yml
+Allow: /*.scss$
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/images
