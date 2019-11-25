@@ -5,6 +5,8 @@ Disallow: /_layouts/
 Disallow: /assets/images/
 Disallow: /_config.yml
 Allow: /*.scss$
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: Googlebot
 Allow: /

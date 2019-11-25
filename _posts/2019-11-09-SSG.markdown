@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Static site generators"
+date: 2019-11-09 08:00
+author: dan
+categories: [IT]
+---
+
+A static site generator (SSG) is an easy-to-use versatile tool that enables you to create a static website with only HTML, text content and templates. As opposed to a Content Management System (CMS), an SSG generates all the pages once when there are changes to the site. Caching is easier, with higher performance and security.
+
+If your project is a simple website for a blog, a CV, marketing a product or documenting a software then an SSG is your best choice!
