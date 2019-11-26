@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Stanley"
+date: 2019-11-09 07:00
+author: mihaela
+categories: [personal]
+---
+
+I found out with deep sadness that our neighbours cat has recently passed away. He always waited for us by the door and it felt like he was our cat too. Rest in peace Stanley and know we will always remember you.
+
+![Stanley](/assets/images/Stanley.jpg)

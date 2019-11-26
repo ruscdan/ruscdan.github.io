@@ -162,6 +162,13 @@ $background-image: url(images/dark-river.jpg);
   box-shadow: 0px -6px 5px 10px gray;
 }
 
+.about_me {
+  img {
+    height: 250px;
+    margin: 10px;
+  }
+}
+
 body {
   color: $text-color;
   background: {
